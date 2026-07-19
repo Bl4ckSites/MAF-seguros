@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // Número atualizado conforme imagens de marketing
   const whatsappNumber = '5521964305535';
   const whatsappMessage = encodeURIComponent('Olá! Gostaria de saber mais sobre os produtos da MARF.');
   const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
