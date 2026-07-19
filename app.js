@@ -38,7 +38,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  document.querySelectorAll('.nav-list > li > a:not(.dropdown-toggle), .dropdown-menu a').forEach(function (link) {
+  // Fechar menu ao clicar em qualquer link (incluindo âncoras)
+  document.querySelectorAll('.nav-list a, .dropdown-menu a').forEach(function (link) {
     link.addEventListener('click', function () {
       if (window.innerWidth <= 768) {
         body.classList.remove('nav-open');
@@ -56,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // ===== CONTADOR DE ESTATÍSTICAS (Suporta decimais e sufixos) =====
+  // ===== CONTADOR DE ESTATÍSTICAS =====
   const counters = document.querySelectorAll('.stat-number');
   if (counters.length > 0) {
     const observer = new IntersectionObserver(function (entries) {
